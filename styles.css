@@ -778,8 +778,8 @@ body.cursor-ready .cursor-follower {
     padding: 0.5em 0;
     position: relative;
     transition: color 0.3s var(--ease-out-quart);
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 22px;
+    min-width: 22px;
 }
 
 .project-link-text {
