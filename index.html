@@ -2,39 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Mohan Prasath — Web Developer & Creative Engineer crafting precision-driven digital experiences">
+    <meta name="theme-color" content="#0a0a0a">
     <title>Mohan Prasath — Web Developer & Creative Engineer</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&display=swap"></noscript>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="cursor" aria-hidden="true"></div>
-    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true" role="presentation"></div>
+    <div class="cursor-follower" aria-hidden="true" role="presentation"></div>
     
-    <div class="grain" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true" role="presentation"></div>
     
-    <nav class="nav">
-        <a href="#hero" class="nav-logo magnetic" data-strength="0.3">MP</a>
-        <div class="nav-links">
+    <header class="nav" role="banner">
+        <a href="#hero" class="nav-logo magnetic" data-strength="0.3" aria-label="Go to top">MP</a>
+        <nav class="nav-links" role="navigation" aria-label="Main navigation">
             <a href="#about" class="nav-link magnetic" data-strength="0.2">Philosophy</a>
             <a href="#work" class="nav-link magnetic" data-strength="0.2">Work</a>
             <a href="#contact" class="nav-link magnetic" data-strength="0.2">Contact</a>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main class="main" data-perspective>
-        <section id="hero" class="hero section">
+    <main class="main" data-perspective role="main">
+        <section id="hero" class="hero section" aria-labelledby="hero-title">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="hero-label layer-mid">
+                    <p class="hero-label layer-mid" aria-label="Role description">
                         <span class="reveal-text">Web Developer</span>
-                        <span class="reveal-text">&</span>
+                        <span class="reveal-text" aria-hidden="true">&amp;</span>
                         <span class="reveal-text">Creative Engineer</span>
-                    </div>
-                    <h1 class="hero-title layer-front">
+                    </p>
+                    <h1 id="hero-title" class="hero-title layer-front">
                         <span class="hero-title-line">
                             <span class="hero-word"><span class="reveal-char" data-delay="0">M</span><span class="reveal-char" data-delay="1">o</span><span class="reveal-char" data-delay="2">h</span><span class="reveal-char" data-delay="3">a</span><span class="reveal-char" data-delay="4">n</span></span>
                         </span>
@@ -44,70 +46,72 @@
                     </h1>
                     <p class="hero-sub layer-mid reveal-text" data-delay="5">Precision-driven systems.<br>Spatial digital craftsmanship.</p>
                 </div>
-                <div class="hero-visual">
+                <aside class="hero-visual" aria-label="Professional information">
                     <div class="hero-metadata layer-mid reveal-block" data-delay="6">
-                        <div class="metadata-rule"></div>
-                        <div class="metadata-item">
-                            <span class="metadata-label">Role</span>
-                            <span class="metadata-value">Web Developer</span>
-                        </div>
-                        <div class="metadata-item">
-                            <span class="metadata-label">Focus</span>
-                            <span class="metadata-value">Editorial Design</span>
-                        </div>
-                        <div class="metadata-item">
-                            <span class="metadata-label">Status</span>
-                            <span class="metadata-value">Available</span>
-                        </div>
+                        <div class="metadata-rule" aria-hidden="true"></div>
+                        <dl class="metadata-list">
+                            <div class="metadata-item">
+                                <dt class="metadata-label">Role</dt>
+                                <dd class="metadata-value">Web Developer</dd>
+                            </div>
+                            <div class="metadata-item">
+                                <dt class="metadata-label">Focus</dt>
+                                <dd class="metadata-value">Editorial Design</dd>
+                            </div>
+                            <div class="metadata-item">
+                                <dt class="metadata-label">Status</dt>
+                                <dd class="metadata-value">Available</dd>
+                            </div>
+                        </dl>
                     </div>
-                </div>
+                </aside>
             </div>
-            <div class="hero-scroll-indicator magnetic" data-strength="0.4">
+            <div class="hero-scroll-indicator magnetic" data-strength="0.4" aria-hidden="true">
                 <span>Scroll</span>
                 <div class="scroll-line"></div>
             </div>
         </section>
 
-        <section id="about" class="about section">
+        <section id="about" class="about section" aria-labelledby="about-title">
             <div class="section-grid about-grid">
                 <div class="about-label">
-                    <span class="section-number layer-front">01</span>
+                    <span class="section-number layer-front" aria-hidden="true">01</span>
                     <span class="section-tag">Philosophy</span>
                 </div>
                 <div class="about-content">
-                    <h2 class="about-title layer-front reveal-line">
+                    <h2 id="about-title" class="about-title layer-front reveal-line">
                         Engineering is an act of intention.
                     </h2>
                     <div class="about-text layer-mid">
                         <p class="reveal-block">Every interface is a system. Every system demands clarity. I build digital experiences where structure reveals itself through restraint — where technical precision meets spatial awareness.</p>
                         <p class="reveal-block">Not decoration. Architecture.</p>
                     </div>
-                    <div class="about-principles">
-                        <div class="principle reveal-block">
-                            <span class="principle-num">I</span>
+                    <ol class="about-principles" role="list">
+                        <li class="principle reveal-block">
+                            <span class="principle-num" aria-hidden="true">I</span>
                             <span class="principle-text">Systems over features</span>
-                        </div>
-                        <div class="principle reveal-block">
-                            <span class="principle-num">II</span>
+                        </li>
+                        <li class="principle reveal-block">
+                            <span class="principle-num" aria-hidden="true">II</span>
                             <span class="principle-text">Clarity through constraint</span>
-                        </div>
-                        <div class="principle reveal-block">
-                            <span class="principle-num">III</span>
+                        </li>
+                        <li class="principle reveal-block">
+                            <span class="principle-num" aria-hidden="true">III</span>
                             <span class="principle-text">Depth, not decoration</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skills section">
+        <section id="skills" class="skills section" aria-labelledby="skills-title">
             <div class="section-grid skills-grid">
                 <div class="skills-label">
-                    <span class="section-number layer-front">02</span>
+                    <span class="section-number layer-front" aria-hidden="true">02</span>
                     <span class="section-tag">Expertise</span>
                 </div>
                 <div class="skills-content">
-                    <h2 class="skills-title layer-front reveal-line">Capabilities</h2>
+                    <h2 id="skills-title" class="skills-title layer-front reveal-line">Capabilities</h2>
                     <div class="skills-columns">
                         <div class="skill-column">
                             <h3 class="skill-category reveal-block">Front-End Architecture</h3>
@@ -141,15 +145,15 @@
             </div>
         </section>
 
-        <section id="work" class="work section">
+        <section id="work" class="work section" aria-labelledby="work-title">
             <div class="section-grid work-grid">
                 <div class="work-label">
-                    <span class="section-number layer-front">03</span>
+                    <span class="section-number layer-front" aria-hidden="true">03</span>
                     <span class="section-tag">Selected Work</span>
                 </div>
                 <div class="work-content">
-                    <h2 class="work-title layer-front reveal-line">Projects</h2>
-                    <div class="work-list">
+                    <h2 id="work-title" class="work-title layer-front reveal-line">Projects</h2>
+                    <div class="work-list" role="list">
                         <article class="project-card magnetic" data-strength="0.15" data-tilt>
                             <div class="project-card-inner layer-front">
                                 <span class="project-year">2025</span>
@@ -203,98 +207,96 @@
             </div>
         </section>
 
-        <section id="experience" class="experience section">
+        <section id="experience" class="experience section" aria-labelledby="experience-title">
             <div class="section-grid experience-grid">
                 <div class="experience-label">
-                    <span class="section-number layer-front">04</span>
+                    <span class="section-number layer-front" aria-hidden="true">04</span>
                     <span class="section-tag">Journey</span>
                 </div>
                 <div class="experience-content">
-                    <h2 class="experience-title layer-front reveal-line">Timeline</h2>
-                    <div class="experience-timeline">
-                        <div class="timeline-item reveal-block">
-                            <div class="timeline-marker"></div>
+                    <h2 id="experience-title" class="experience-title layer-front reveal-line">Timeline</h2>
+                    <div class="experience-timeline" role="list">
+                        <article class="timeline-item reveal-block" role="listitem">
+                            <div class="timeline-marker" aria-hidden="true"></div>
                             <div class="timeline-content">
-                                <span class="timeline-period">2025 — Present</span>
+                                <time class="timeline-period" datetime="2025">2025 — Present</time>
                                 <h3 class="timeline-role">Founder</h3>
                                 <p class="timeline-company">TaskDrift</p>
                                 <p class="timeline-desc">Building and leading TaskDrift, a modern web development agency focused on designing clean, system-driven websites for startups, creators, and early-stage products.</p>
                             </div>
-                        </div>
-                        <div class="timeline-item reveal-block">
-                            <div class="timeline-marker"></div>
+                        </article>
+                        <article class="timeline-item reveal-block" role="listitem">
+                            <div class="timeline-marker" aria-hidden="true"></div>
                             <div class="timeline-content">
-                                <span class="timeline-period">2025 — Present</span>
+                                <time class="timeline-period" datetime="2025">2025 — Present</time>
                                 <h3 class="timeline-role">President</h3>
                                 <p class="timeline-company">Gen AI Club — NIAT X Crescent</p>
-                                <p class="timeline-desc">Leading the club on AI-assisted coding and development
-                                workflows</p>
+                                <p class="timeline-desc">Leading the club on AI-assisted coding and development workflows</p>
                             </div>
-                        </div>
-                        <div class="timeline-item reveal-block">
-                            <div class="timeline-marker"></div>
+                        </article>
+                        <article class="timeline-item reveal-block" role="listitem">
+                            <div class="timeline-marker" aria-hidden="true"></div>
                             <div class="timeline-content">
-                                <span class="timeline-period">2025 — Present</span>
-                                <h3 class="timeline-role">B.Tech in Computer Science and Engineering (AI & ML)</h3>
+                                <time class="timeline-period" datetime="2025">2025 — Present</time>
+                                <h3 class="timeline-role">B.Tech in Computer Science and Engineering (AI &amp; ML)</h3>
                                 <p class="timeline-company">BSA Crescent Institute of Science and Technology</p>
                                 <p class="timeline-desc">Industry-integrated program with placements and training facilitated by NxtWave Institute of Advanced Technologies (NIAT).</p>
                             </div>
-                        </div>
-                        <div class="timeline-item reveal-block">
-                            <div class="timeline-marker"></div>
+                        </article>
+                        <article class="timeline-item reveal-block" role="listitem">
+                            <div class="timeline-marker" aria-hidden="true"></div>
                             <div class="timeline-content">
-                                <span class="timeline-period">2025 — Present</span>
+                                <time class="timeline-period" datetime="2025">2025 — Present</time>
                                 <h3 class="timeline-role">Industry-Ready Upskilling Program</h3>
                                 <p class="timeline-company">NxtWave Institute of Advanced Technologies (NIAT)</p>
-                                <p class="timeline-desc"></p>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact section">
+        <section id="contact" class="contact section" aria-labelledby="contact-title">
             <div class="section-grid contact-grid">
                 <div class="contact-label">
-                    <span class="section-number layer-front">05</span>
+                    <span class="section-number layer-front" aria-hidden="true">05</span>
                     <span class="section-tag">Contact</span>
                 </div>
                 <div class="contact-content">
-                    <h2 class="contact-title layer-front reveal-line">Let's build something.</h2>
+                    <h2 id="contact-title" class="contact-title layer-front reveal-line">Let's build something.</h2>
                     <div class="contact-body">
                         <div class="contact-info">
-                            <a href="mailto:mohanprasath210607@gmail.com" class="contact-email magnetic" data-strength="0.25">mohanprasath210607@gmail.com</a>
+                            <a href="mailto:mohanprasath210607@gmail.com" class="contact-email magnetic" data-strength="0.25" aria-label="Send email to mohanprasath210607@gmail.com">mohanprasath210607@gmail.com</a>
                             <p class="contact-availability">Available for select projects and collaborations.</p>
                         </div>
-                        <form class="contact-form" id="contactForm">
+                        <form class="contact-form" id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" id="name" name="name" class="form-input" required autocomplete="name">
-                                <span class="form-line"></span>
+                                <input type="text" id="name" name="name" class="form-input" required autocomplete="name" aria-required="true">
+                                <span class="form-line" aria-hidden="true"></span>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
-                                <span class="form-line"></span>
+                                <input type="email" id="email" name="email" class="form-input" required autocomplete="email" aria-required="true">
+                                <span class="form-line" aria-hidden="true"></span>
                             </div>
                             <div class="form-group form-group-message">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea id="message" name="message" class="form-input form-textarea" required rows="4"></textarea>
-                                <span class="form-line"></span>
+                                <textarea id="message" name="message" class="form-input form-textarea" required rows="4" aria-required="true"></textarea>
+                                <span class="form-line" aria-hidden="true"></span>
                             </div>
                             <button type="submit" class="form-submit magnetic" data-strength="0.3">
                                 <span class="submit-text">Send Message</span>
-                                <span class="submit-line"></span>
+                                <span class="submit-line" aria-hidden="true"></span>
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="contact-footer">
+            <footer class="contact-footer" role="contentinfo">
                 <span class="footer-name">Mohan Prasath</span>
                 <span class="footer-year">2026</span>
-            </div>
+            </footer>
         </section>
     </main>
 
