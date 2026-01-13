@@ -23,7 +23,7 @@
     --space-xs: clamp(0.5rem, 1vw, 0.75rem);
     --space-sm: clamp(1rem, 2vw, 1.5rem);
     --space-md: clamp(2rem, 4vw, 3rem);
-    --space-lg: clamp(4rem, 8vw, 6rem);
+    --space-lg: clamp(4rem,4vw, 6rem);
     --space-xl: clamp(6rem, 12vw, 10rem);
     --space-2xl: clamp(8rem, 16vw, 14rem);
     
@@ -613,17 +613,9 @@ body.cursor-ready .cursor-follower {
     cursor: pointer;
 }
 
-.project-card:first-child {
+.project-card > * {
     grid-row: span 1;
-    padding: var(--space-xl);
-}
-
-.project-card:nth-child(2) {
-    transform: translateY(2rem);
-}
-
-.project-card:nth-child(4) {
-    transform: translateY(-1.5rem);
+    padding: var(--space-lg);
 }
 
 .project-card-inner {
